@@ -19,7 +19,9 @@ module EditorHelper
 
   def markdown_editor(options)
     content_tag(:div, class: 'easyMarkdown') do
-      yield
+      content_tag(:div, class: 'easyMarkdown-textarea') do
+        yield
+      end +
       content_tag(:div, class: 'easyMarkdown--buttons') do
         build_buttons(options)
       end
