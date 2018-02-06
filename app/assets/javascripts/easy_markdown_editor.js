@@ -2,6 +2,7 @@
 
 EasyMarkdownEditor = {
   initializeEditor: function() {
+    console.log('binding');
     this.markdownEditor();
     document.removeEventListener('turbolinks:load page:load ready', this.intializeEditor);
     let previewBtns = document.querySelectorAll('.easyMarkdown--previewBtn');

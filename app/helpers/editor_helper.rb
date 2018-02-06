@@ -3,7 +3,7 @@ module EditorHelper
     content_tag(:div, class: 'easyMarkdown') do
       content_tag(:div, class: 'easyMarkdown--option') do
         content
-      end
+      end +
       content_tag(:div, class: 'easyMarkdown--previewBtn') do
         content
       end
