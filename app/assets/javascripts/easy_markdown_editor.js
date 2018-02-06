@@ -26,8 +26,5 @@ EasyMarkdownEditor = {
   }
 }
 
-if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-    document.addEventListener('turbolinks:load page:load ready', EasyMarkdownEditor.initializeEditor);
-  } else {
-    document.addEventListener('DOMContentLoaded', document.addEventListener('turbolinks:load page:load ready', EasyMarkdownEditor.initializeEditor));
-}
+
+$(document).on('turbolinks:load page:load ready', EasyMarkdownEditor.initializeEditor);
