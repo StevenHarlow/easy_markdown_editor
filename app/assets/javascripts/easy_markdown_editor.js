@@ -3,11 +3,11 @@
 EasyMarkdownEditor = {
   initializeEditor: function() {
     console.log('binding');
-    this.markdownEditor();
-    document.removeEventListener('turbolinks:load page:load ready', this.intializeEditor);
+    EasyMarkdownEditor.markdownEditor();
+    document.removeEventListener('turbolinks:load page:load ready', EasyMarkdownEditor.intializeEditor);
     let previewBtns = document.querySelectorAll('.easyMarkdown--previewBtn');
     previewBtns.forEach(function(elem) {
-      elem.addEventListener('click', this.preview);
+      elem.addEventListener('click', EasyMarkdownEditor.preview);
     });
   },
 
