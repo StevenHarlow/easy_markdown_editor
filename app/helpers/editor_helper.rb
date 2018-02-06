@@ -30,9 +30,9 @@ module EditorHelper
     def self.build_buttons(options)
       buttons = ALL_BUTTONS - options[:exclude]
       content_tag(:div, class: 'easyMarkdown--buttons') do
-        buttons.each do |b|
-          button_tag(:div, class: "easyMarkdown--#{b}") +
-        end
+        buttons.reduce('') |group,btn|
+          group << button_tag(:div, class: "easyMarkdown--btn easyMarkdown--#{b}")
+        end.html_safe +
         button_tag(:div, class: 'easyMarkdown--previewBtn')
       end
     end

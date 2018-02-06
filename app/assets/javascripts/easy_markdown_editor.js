@@ -12,7 +12,7 @@ EasyMarkdownEditor = {
   },
 
   markdownEditor: function() {
-    let markdownBtns = document.querySelectorAll('.easyMarkdown--option');
+    let markdownBtns = document.querySelectorAll('.easyMarkdown--btn');
     markdownBtns.forEach(function(elem) {
       elem.addEventListener('click', function(){
         console.log('hi');
