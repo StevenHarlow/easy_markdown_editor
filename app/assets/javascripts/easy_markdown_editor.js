@@ -8,7 +8,7 @@ EasyMarkdownEditor = {
     previewBtns.forEach(function(elem) {
       elem.addEventListener('click', preview);
     });
-  }
+  },
 
   markdownEditor: function() {
     markdownBtns = document.querySelectorAll('.easyMarkdown--option');
@@ -18,11 +18,11 @@ EasyMarkdownEditor = {
         console.log(this);
       });
     });
-  }
+  },
 
   preview: function() {
     console.log('Preview!');
   }
 }
 
-document.addEventListener('turbolinks:load page:load ready', intializeEditor);
+document.addEventListener('turbolinks:load page:load ready', EasyMarkdownEditor.intializeEditor);
