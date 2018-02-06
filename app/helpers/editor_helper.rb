@@ -26,7 +26,7 @@ module EditorHelper
     end
   end
 
-  def self.build_buttons(options)
+  def build_buttons(options)
     buttons = ALL_BUTTONS - options[:exclude]
     content_tag(:div, class: 'easyMarkdown--buttons') do
       buttons.reduce('') do |group,btn|
